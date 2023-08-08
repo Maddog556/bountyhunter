@@ -11,7 +11,7 @@ process.env.SECRET
 app.use(express.json()) //looks for a request body, ant turns it into 'req.body'
 app.use(morgan('dev'))
 
-app.use(express.static(path.join(__dirname, "client", "dist")))
+app.use(express.static(path.join(__dirname, "client", "build")))
 
 
 // connect to data base 27017 is the default port for local host in mongodb 
@@ -25,7 +25,7 @@ mongoose.connect(uri,
 app.use("/bountiesList", require("./routes/bountyRouter.js"))
 
 app.get("*", (req, res) => {
-    res.sendFile(path.join(__dirname, "client", "dist", "index.html"));
+    res.sendFile(path.join(__dirname, "client", "build", "index.html"));
 });
 
 //Error handler and to have these 4 params 
