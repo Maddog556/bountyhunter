@@ -4,6 +4,7 @@ const mongoose = require("mongoose")
 const app = express()
 require("dotenv").config()
 uri = process.env.URI
+const path = require('path')
 process.env.SECRET
 
 // Middleware (for every request)
