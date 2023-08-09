@@ -13,26 +13,24 @@ app.use(morgan('dev'))
 
 app.use(express.static(path.join(__dirname, "client", "dist")))
 
-
 // connect to data base 27017 is the default port for local host in mongodb 
 mongoose.set('strictQuery', false)
 mongoose.connect(uri,
 () => console.log("connected to the data base")
 )
 
-
 // Routes
 app.use("/bountiesList", require("./routes/bountyRouter.js"))
-
-app.get("*", (req, res) => {
-    res.sendFile(path.join(__dirname, "client", "dist", "index.html"));
-});
 
 //Error handler and to have these 4 params 
 app.use((err,req,res,next) => {
     console.log(err)
     return res.send({errMsg: err.message})
 })
+
+app.get("*", (req, res) => {
+    res.sendFile(path.join(__dirname, "client", "dist", "index.html"));
+});
    
 //server listen//
 app.listen(9000, () => {
