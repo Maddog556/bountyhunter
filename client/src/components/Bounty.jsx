@@ -71,7 +71,7 @@ function HandleFilter(e){
         submit={addBounties}
         btnText ='Add Bounty'
     />
-    {bountiesList.map(bounty => 
+    {bountiesList?.map(bounty => 
         <BountyFront 
             {...bounty} 
             key={bounty._id} 

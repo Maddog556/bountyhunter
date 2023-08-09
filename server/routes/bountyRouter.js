@@ -1,7 +1,7 @@
 
 const express = require("express")
 const bountyRouter = express.Router()
-const Bounty = require("../server/models/bounty.js")
+const Bounty = require("../models/bounty.js")
 
 
 // mongodb makes its own ids

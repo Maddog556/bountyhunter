@@ -15,7 +15,7 @@ app.use(express.static(path.join(__dirname, "client", "dist")))
 
 // connect to data base 27017 is the default port for local host in mongodb 
 mongoose.set('strictQuery', false)
-mongoose.connect(uri,
+mongoose.connect('mongodb+srv://Josh:jqMYxQEYY@cluster0.3mv0url.mongodb.net/bountydb',
 () => console.log("connected to the data base")
 )
 
