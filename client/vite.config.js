@@ -10,7 +10,7 @@ import react from '@vitejs/plugin-react'
   server: {
     proxy: {
       // put target start params example localhost:9000/test 
-      '/bountiesList': {
+      '/api': {
         target: 'http://localhost:9000',
         changeOrigin: true,
       },

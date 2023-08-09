@@ -19,7 +19,7 @@ mongoose.connect(`${process.env.URI}`,
 )
 
 // Routes
-app.use("/bountiesList", require("./routes/bountyRouter.js"))
+app.use("/api", require("./routes/bountyRouter.js"))
 
 //Error handler and to have these 4 params 
 app.use((err,req,res,next) => {
