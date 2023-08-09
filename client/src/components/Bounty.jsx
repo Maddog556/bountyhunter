@@ -10,13 +10,13 @@ function Bounty() {
 
 //get all bounties
   function getBounties(){
-    axios.get('/bountiesList')
+    axios.get('/api/bountiesList')
       .then(res => setBountiesList(res.data))
       .catch(err => console.log(err.response.data.errMsg))
   }
 // add new bounty
   function addBounties(newBountyAdded){
-    axios.post('/bountiesList',newBountyAdded)
+    axios.post('/api/bountiesList',newBountyAdded)
     .then(res => {
         setBountiesList(prevbounties => [...prevbounties, res.data])
     })
@@ -25,7 +25,7 @@ function Bounty() {
 
 // delete function
 function deleteBounty(bountyId){
-axios.delete(`/bountiesList/${bountyId}`)
+axios.delete(`/api/bountiesList/${bountyId}`)
 .then(res => {
     setBountiesList(prevbounties => prevbounties.filter(bounty => bounty._id !== bountyId))
 })
@@ -34,7 +34,7 @@ axios.delete(`/bountiesList/${bountyId}`)
 
 // edit function
 function editBounty(updates,bountyId){
-    axios.put(`/bountiesList/${bountyId}`,updates)
+    axios.put(`/api/bountiesList/${bountyId}`,updates)
     .then(res => {
         setBountiesList(prevbounties => prevbounties.map(bounty => bounty._id !== bountyId ? bounty : res.data))
     })
@@ -45,7 +45,7 @@ function handleFilter(e){
   if(e.target.value === 'reset'){
     getBounties()
   } else{
-  axios.get(`/bountiesList/search/type?type=${e.target.value}`)
+  axios.get(`/api/bountiesList/search/type?type=${e.target.value}`)
   .then(res => setBountiesList(res.data))
   .catch(err => console.log(err))
   }
