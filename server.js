@@ -3,7 +3,7 @@ const morgan = require("morgan")
 const mongoose = require("mongoose")
 const app = express()
 require("dotenv").config()
-uri = process.env.URI
+
 const path = require('path')
 process.env.SECRET
 
@@ -15,7 +15,7 @@ app.use(express.static(path.join(__dirname, "client", "dist")))
 
 // connect to data base 27017 is the default port for local host in mongodb 
 mongoose.set('strictQuery', false)
-mongoose.connect('mongodb+srv://Josh:jqMYxQEYY@cluster0.3mv0url.mongodb.net/bountydb',
+mongoose.connect(`${process.env.URI}`,
 () => console.log("connected to the data base")
 )
 

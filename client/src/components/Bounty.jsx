@@ -41,7 +41,7 @@ function editBounty(updates,bountyId){
     .catch(err => console.log(err))
 }
 // filter
-function HandleFilter(e){
+function handleFilter(e){
   if(e.target.value === 'reset'){
     getBounties()
   } else{
@@ -59,7 +59,7 @@ function HandleFilter(e){
 <div className="cardContainer">
 
 <h4>Filter by Type</h4>
-  <select onChange={HandleFilter}>
+  <select onChange={handleFilter}>
   <option>-- Select a Type --</option>
   <option value="Jedi">Jedi</option>
   <option value="Sith">Sith</option>
