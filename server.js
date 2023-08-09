@@ -3,9 +3,8 @@ const morgan = require("morgan")
 const mongoose = require("mongoose")
 const app = express()
 require("dotenv").config()
-
 const path = require('path')
-process.env.SECRET
+
 
 // Middleware (for every request)
 app.use(express.json()) //looks for a request body, ant turns it into 'req.body'

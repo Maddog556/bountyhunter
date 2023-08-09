@@ -23,6 +23,5 @@ const bountySchema = new Schema({
     status: String,
 })
 
-
 //this is a method it must have a name and what schema to use 
 module.exports = mongoose.model("Bounty",bountySchema)
