@@ -11,7 +11,7 @@ import react from '@vitejs/plugin-react'
     proxy: {
       // put target start params example localhost:9000/test 
       '/bountiesList': {
-        target: 'http://localhost:9000/',
+        target: 'https://bounty-xb1h.onrender.com/',
         changeOrigin: true,
       },
     }
