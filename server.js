@@ -9,11 +9,11 @@ const path = require('path')
 // Middleware (for every request)
 app.use(express.json()) //looks for a request body, ant turns it into 'req.body'
 app.use(morgan('dev'))
-
+mongoose.set('strictQuery', false)
 app.use(express.static(path.join(__dirname, "client", "dist")))
 
 // connect to data base 27017 is the default port for local host in mongodb 
-mongoose.set('strictQuery', false)
+
 mongoose.connect(`${process.env.URI}`,
 () => console.log("connected to the data base")
 )
