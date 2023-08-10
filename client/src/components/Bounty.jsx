@@ -51,6 +51,7 @@ function handleFilter(e){
   }
 }
   useEffect(() => {
+    console.log('test fire')
     getBounties()
   },[])
   
