@@ -11,7 +11,7 @@ import react from '@vitejs/plugin-react'
     proxy: {
       // put target start params example localhost:9000/test 
       '/api': {
-        target: 'http://localhost:9000',
+        target: 'http://localhost:8000',
         changeOrigin: true,
         secure:false
       },

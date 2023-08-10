@@ -32,7 +32,7 @@ app.get("*", (req, res) => {
 });
    
 //server listen//
-app.listen(9000, () => {
-    console.log("the server is running on Port 9000")
+app.listen(8000, () => {
+    console.log("the server is running on Port 8000")
 
 })
