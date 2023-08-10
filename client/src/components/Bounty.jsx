@@ -10,6 +10,7 @@ function Bounty() {
 
 //get all bounties
   function getBounties(){
+    console.log('test fire')
     axios.get('/api/bountiesList')
       .then(res => setBountiesList(res.data))
       .catch(err => console.log(err.response.data.errMsg))
@@ -51,7 +52,6 @@ function handleFilter(e){
   }
 }
   useEffect(() => {
-    console.log('test fire')
     getBounties()
   },[])
   
