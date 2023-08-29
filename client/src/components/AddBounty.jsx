@@ -1,6 +1,6 @@
 
 import React,{useState} from "react";
-import "./Addbounty.css"
+import "./styles/Addbounty.css"
 
 export default function AddBounty(props){
     
@@ -26,42 +26,43 @@ export default function AddBounty(props){
     }
 
     return(
-        <form onSubmit={handleSubmit}>
-            <input 
+        <form id='input-form'onSubmit={handleSubmit}>
+            
+            <input id="firstName" className="all-inputs" 
             type='text' 
             name='firstName' 
             value={inputs.firstName} 
             onChange={handleChange} 
             placeholder='First Name'/>
 
-            <input 
+            <input id="lastName" className="all-inputs"
             type='text' 
             name='lastName' 
             value={inputs.lastName} 
             onChange={handleChange} 
             placeholder='Last Name'/>
 
-            <input 
+            <input id="num" className="all-inputs" 
             type='number' 
             name='age' 
             value={inputs.age} 
             onChange={handleChange} 
             placeholder='Age'/>
           
-          <select name="status" id="status" onChange={handleChange}>
+          <select name="status" id="status" className="all-inputs" onChange={handleChange}>
                 <option>--Status--</option>
                 <option value="Alive">Alive</option>
                 <option value="Dead">Dead</option>
                 <option value="Unknown">Unknown</option>
             </select>
             
-            <select name="type" id="type" onChange={handleChange}>
+            <select name="type" id="type" className="all-inputs" onChange={handleChange}>
                 <option>--Type--</option>
                 <option value="Jedi">Jedi</option>
                 <option value="Sith">Sith</option>
             </select>
 
-            <button>{props.btnText}</button>
+            <button id="add-button">{props.btnText}</button>
 
         </form>
     )

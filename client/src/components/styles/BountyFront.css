@@ -1,0 +1,37 @@
+
+#output-div{
+    border:.3rem solid #ffe919;
+}
+.outputs{
+    color:#ffe919;
+    padding-left: 10rem;
+}
+#buttons-output{
+    margin-left: 30rem;
+}
+.button-edit{
+    width: 12rem;
+    height: 2rem;
+    background-image: linear-gradient(180deg,transparent,rgb(0, 80, 253)80%,rgb(0, 0, 0)); ;
+}
+.button-del{
+    color: aliceblue;
+    width: 12rem;
+    height: 2rem;
+    background-image: linear-gradient(180deg,transparent,rgb(126, 0, 0)80%,rgb(0, 0, 0)); ;
+}
+#close-btn{
+    color: aliceblue;
+    width: 15rem;
+    height: 3rem;
+    background-image: linear-gradient(180deg,transparent,rgb(126, 0, 0)60%,rgb(0, 0, 0)); ;
+}
+@media(max-width:900px){
+    .outputs{
+        padding-left: 0rem;
+    }
+    #buttons-output{
+        margin-left: 0rem;
+    }
+    
+}

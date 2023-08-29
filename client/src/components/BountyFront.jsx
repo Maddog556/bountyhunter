@@ -1,5 +1,6 @@
 import React,{useState} from 'react'
 import AddBounty from './AddBounty'
+import './styles/BountyFront.css'
 
 
 function BountyFront(props) {
@@ -10,22 +11,25 @@ function BountyFront(props) {
     <div>
         
         {!editToggle ?
-        <>
-            <h4>First Name: {firstName}</h4>
-            <h4>Last Name: {lastName}</h4>
-            <p>Age:{age}</p>
-            <p>Type:{type}</p>
-            <p>Status:{status}</p>
-            <p>Id number:{_id}</p>
+        <div id='output-div'>
+            <h3 className='outputs'>First Name: {firstName}</h3>
+            <h3 className='outputs'>Last Name: {lastName}</h3>
+            <p className='outputs'>Age:{age}</p>
+            <p className='outputs'>Type:{type}</p>
+            <p className='outputs'>Status:{status}</p>
+            <p className='outputs'>Id number:{_id}</p>
+        <div id='buttons-output'>
         <button 
-        className  ='delete-btn'
+        className='button-del'
         onClick={() => props.deleteBounty(_id)}
         >Delete
         </button>
         <button
+        className='button-edit'
             onClick={() => setEditToggle(prevToggle => !prevToggle)}
         >Edit</button>
-        </>
+        </div>
+        </div>
         :
         <>
         <AddBounty
@@ -39,8 +43,9 @@ function BountyFront(props) {
             submit={props.editBounty}
         />
         <button
+        id='close-btn'
             onClick={() => setEditToggle(prevToggle => !prevToggle)}
-        >Close</button>
+        >Close Edit Box</button>
         </>
     }
     </div>

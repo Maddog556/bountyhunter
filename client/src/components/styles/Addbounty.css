@@ -1,0 +1,25 @@
+#input-form{
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: 1rem;
+}
+
+.all-inputs{
+    width: 30rem;
+    height: 2rem;
+    background-image: linear-gradient(180deg,transparent,rgb(234, 255, 118)60%,rgb(0, 0, 0)); ;
+}
+#add-button{
+    width: 12rem;
+    height: 3rem;
+    background-image: linear-gradient(90deg,transparent,rgb(0, 106, 255)30%,rgb(202, 0, 0));
+    margin-bottom: 5rem;
+    color:rgb(255, 255, 255);
+}
+@media(max-width:500px){
+    .all-inputs{
+        width: 12rem;
+        height: 2rem;
+    }
+}

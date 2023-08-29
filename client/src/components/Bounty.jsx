@@ -2,6 +2,7 @@ import React,{ useState,useEffect } from 'react'
 import axios from 'axios'
 import BountyFront from './BountyFront'
 import AddBounty from './AddBounty'
+import './styles/Bounty.css'
 
 
 function Bounty() {
@@ -58,14 +59,14 @@ function handleFilter(e){
   return (
 <div className="cardContainer">
 
-<h4>Filter by Type</h4>
-  <select onChange={handleFilter}>
+<h4 id='text-filter'>Filter by Type</h4>
+  <select id='filter' onChange={handleFilter}>
   <option>-- Select a Type --</option>
   <option value="Jedi">Jedi</option>
   <option value="Sith">Sith</option>
   <option value="reset">All types</option>
   </select>
-
+  <h1 id="title">Bounty Hunter</h1>
     <AddBounty
         //here is for editing and add button on the form 
         submit={addBounties}
